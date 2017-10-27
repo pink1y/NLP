@@ -9,7 +9,8 @@ raw_data_source: [cornell movie-dialogs corpus](https://www.cs.cornell.edu/~cris
 * Parsed from movie_lines.txt
 
  format of movie_lines.txt:
- fields: lineID, characterID, movieID, character name, text of the utterance
+ fields: 
+ ```lineID, characterID, movieID, character name, text of the utterance```
 ```
  'lineID':{
  	'cname':character name,
