@@ -47,6 +47,8 @@ raw_data_source: [cornell movie-dialogs corpus](https://www.cs.cornell.edu/~cris
 }
 ```
 ### word_bank.json
+* count the dfi of each word shows in movie_lines.txt
+* record the pos of each word
 ```
 #ttl 55382 words
 'word':{
@@ -55,3 +57,26 @@ raw_data_source: [cornell movie-dialogs corpus](https://www.cs.cornell.edu/~cris
 	'word': the word
 }
 ```
+### word_bank_sorted.json
+a list for words, descending sorted by dfi
+
+### word_count_inS.json
+record each line's words' count and pos
+```
+#ttl 304713 lines
+'line_id':{
+	'wordA':{
+		'count': the num this word shows up in this line,
+		'pos': part of sentence,
+		'word': the wordA
+	}
+	'wordB':{
+		'count': the num this word shows up in this line,
+		'pos': part of sentence,
+		'word': the wordB
+	}
+	...
+}
+```
+### word_count_inS_list.json
+a list of word count for each line, with the line order in ```movie_lines.txt```
