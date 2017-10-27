@@ -52,6 +52,6 @@ raw_data_source: [cornell movie-dialogs corpus](https://www.cs.cornell.edu/~cris
 'word':{
 	'dfi': num of line_id contains this word,
 	'pos': part of speech,
-	'word': the word\
+	'word': the word
 }
 ```
