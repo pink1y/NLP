@@ -1,40 +1,41 @@
 # this program pick words as dimension for further analyse
 
 import json
-from pprint import pprint
 import os
 import math
 import operator
 from time import time
-from pprint import pprint
-from operator import add
 
 # determine choosing method
 # ---frequency control
 freq = 100
 # ---pos control
 _pos = 'VB'
+
+
 with open('word_bank_sorted.json', 'r') as _bank:
     all_words = json.load(_bank)
-    
+
+# store choosed words
 dim = {}
 
+# index for choosed words
 used = 0
+
 for aW in all_words:
 
-    # consider words only
+    # consider letters only
     for char in aW[1]['word']: 
         if char.isalpha() != True:
             isWord = False
     if isWord == False:
         continue
         
-    # consider the words with lower dfi
+    # consider the words with lower freq
     if aW[1]['dfi'] > freq:
         continue
         
     # consider pos
-
     if not aW[1]['pos'].startswith(_pos):
         continue
 
