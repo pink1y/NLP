@@ -80,3 +80,18 @@ record each line's words' count and pos
 ```
 ### word_count_inS_list.json
 a list of word count for each line, with the line order in ```movie_lines.txt```
+
+### word_bank_dim300.json
+a dimension consists of 300 words
+```
+{
+	'wordA':{
+		'word': the word,
+		'dfi': the num of lines contain this word,
+		'index': index,
+		'dfi_value': log10(304713/dfi)
+	}
+	'wordB':...
+}
+```
+
